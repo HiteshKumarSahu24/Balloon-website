@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="../Balloon website/images/logo.png" alt="">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="../Balloon website/images/menu.png" alt="">
+                </div>
+            </nav>
+            <div class="content">
+                <div class="social-icons">
+                    <img src="../Balloon website/images/instagram.png" alt="">
+                    <img src="../Balloon website/images/facebook.png" alt="">
+                    <img src="../Balloon website/images/twitter.png" alt="">
+                    <img src="../Balloon website/images/youtube.png" alt="">
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <img src="../Balloon website/images/search.png" alt="">
+                </div>
+            </div>
+        </div>
+        <img src="../Balloon website/images/cloud.png" id="clouds">
+        <img src="../Balloon website/images/plane.png" id="airplane">
+        <div id="hotairballoon">
+            <img src="../Balloon website/images/balloon.png" class="balloon-1">
+            <img src="../Balloon website/images/balloon.png" class="balloon-2">
+            <img src="../Balloon website/images/balloon.png" class="balloon-3">
+        </div>
+        <img src="../Balloon website/images/pause.png" id="myimg">;
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K4DyBUG242c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K4DyBUG242c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <script>
+        let myimg = document.getElementById('myimg');
+        myimg.addEventListener('click', function run() {
+            if (clouds.style.webkitAnimationPlayState == "paused") {
+                clouds.style.webkitAnimationPlayState = "running";
+                airplane.style.webkitAnimationPlayState = "running";
+                hotairballoon.style.webkitAnimationPlayState = "running";
+                myimg.src = "../Balloon website/images/pause.png"
+            }
+            else {
+                clouds.style.webkitAnimationPlayState = "paused";
+                airplane.style.webkitAnimationPlayState = "paused";
+                hotairballoon.style.webkitAnimationPlayState = "paused";
+                myimg.src = "../Balloon website/images/play.png"
+            }
+        });
+
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener('load', function(){
+            loader.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
